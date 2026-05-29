@@ -1,0 +1,43 @@
+# Секреты и локальная конфигурация
+.env
+.env.*
+
+# Виртуальное окружение (не коммитить папку wds_1/ или .venv/)
+wds_1/
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+
+
+# Данные рантайма (SQLite, Chroma, логи)
+data/*
+!data/
+!data/interactions_schema.sql
+!data/interactions.sample.jsonl
+*.sqlite3
+data1/*
+db/*
+scripts/*
+rag_logs.jsonl
+**/rag_logs.jsonl
+
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Опционально: большие датасеты чанков (раскомментируйте при необходимости)
+# cleaned_rag_chunks_*.txt
+Предложения.txt
+agent_rag.py
+qdrant_info.py
