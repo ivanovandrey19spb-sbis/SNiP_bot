@@ -72,58 +72,50 @@ ________________________________________
 🤖 Telegram Bot & Dialogue Management
 
 Разработали Telegram-бота с управлением диалогами: обработка сообщений, хранение истории, создание новых сессий и форматирование ответов LLM.
-→ Стек: Python, pyTelegramBotAPI, SQLite.
-→ Ценность: опыт разработки conversational AI-интерфейса и управления состоянием диалога.
+- Стек: Python, pyTelegramBotAPI, SQLite.
+- Ценность: опыт разработки conversational AI-интерфейса и управления состоянием диалога.
 ________________________________________
 🧠 LLM Integration Layer
 
 Интегрировали OpenRouter / OpenAI-compatible API через собственный compatibility-layer с поддержкой timeout, retry и конфигурируемых моделей.
-Стек: Python, openai SDK, .env configuration.
-Ценность: работа с production-like AI API, обработкой transient failures и устойчивостью внешних интеграций.
+- Стек: Python, openai SDK, .env configuration.
+- Ценность: работа с production-like AI API, обработкой transient failures и устойчивостью внешних интеграций.
 ________________________________________
 🔎 Lexical Retrieval with Supabase
 
 Реализовали retrieval по базе знаний через Supabase: поиск релевантных чанков по токенам и stop-словам с последующей передачей контекста в LLM.
-Стек: Supabase, PostgreSQL, Python, lexical search.
-Ценность: практический опыт построения retrieval-контура для повышения точности генерации.
+- Стек: Supabase, PostgreSQL, Python, lexical search.
+- Ценность: практический опыт построения retrieval-контура для повышения точности генерации.
 ________________________________________
 🔢 Semantic Vector Search with Qdrant
 
 Подключили векторный поиск по embeddings: формировали embedding пользовательского запроса и искали semantic nearest chunks в Qdrant.
-Стек: Qdrant, sentence-transformers, transformers, torch, ai-forever/ru-en-RoSBERTa.
-Ценность: опыт работы с vector databases, embeddings и semantic retrieval.
+- Стек: Qdrant, sentence-transformers, transformers, torch, ai-forever/ru-en-RoSBERTa.
+- Ценность: опыт работы с vector databases, embeddings и semantic retrieval.
 ________________________________________
 ⚖️ Hybrid Retrieval & Reciprocal Rank Fusion
 
 Улучшили качество retrieval через гибридное ранжирование: объединили lexical- и vector-поиск с использованием Reciprocal Rank Fusion и fallback merge-режима без дубликатов.
-Стек: Python, Supabase, Qdrant, RRF.
-Ценность: понимание retrieval quality, ranking strategies и компромиссов между полнотой поиска и размером LLM-контекста.
+- Стек: Python, Supabase, Qdrant, RRF.
+- Ценность: понимание retrieval quality, ranking strategies и компромиссов между полнотой поиска и размером LLM-контекста.
 ________________________________________
 💬 Chat History & Session Storage
 
-Спроектировали хранение истории диалогов:
--	локально через SQLite; 
--	опционально через Supabase (chat_sessions, messages); 
--	реализовали сопоставление Telegram user ↔ UUID. 
-Стек: SQLite, Supabase, PostgreSQL.
-Ценность: опыт проектирования состояния AI-сервиса и резервных сценариев хранения данных.
+Спроектировали хранение истории диалогов: локально через SQLite и опционально через Supabase (chat_sessions, messages). 
+- Стек: SQLite, Supabase, PostgreSQL.
+- Ценность: опыт проектирования состояния AI-сервиса и резервных сценариев хранения данных.
 ________________________________________
 📊 Observability & Retrieval Logging
 
-Добавили logging и observability retrieval-контура:
--	логирование найденных чанков; 
--	RRF-score; 
--	тайминги; 
--	JSONL и SQLite interaction logs; 
--	скрытие чувствительных данных в логах. 
-Стек: Python logging, JSONL, SQLite.
-Ценность: диагностика retrieval quality и анализ поведения AI-системы.
+Добавили logging и observability retrieval-контура: логирование найденных чанков и RRF-score. 
+- Стек: Python logging, JSONL, SQLite.
+- Ценность: диагностика retrieval quality и анализ поведения AI-системы.
 ________________________________________
 🧪 Smoke Tests & Integration Checks
 
 Создали smoke-проверки интеграций Supabase/Qdrant и сценарии тестирования записи/чтения сообщений.
-Стек: Python CLI, qdrant-client, supabase.
-Ценность: опыт диагностики внешних сервисов и проверки устойчивости интеграций.
+- Стек: Python CLI, qdrant-client, supabase.
+- Ценность: опыт диагностики внешних сервисов и проверки устойчивости интеграций.
 ________________________________________
 🚀 Быстрый старт
 
