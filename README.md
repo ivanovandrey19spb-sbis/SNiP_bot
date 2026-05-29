@@ -123,16 +123,13 @@ ________________________________________
 -	Python 3.10+ 
 -	Telegram Bot Token 
 -	OpenRouter / OpenAI API Key 
+
 Запуск
-python -m venv venv
-
-.\venv\Scripts\activate
-
-pip install -r requirements.txt
-
-cp env.example .env
-
-python bot.py
+- python -m venv venv
+- .\venv\Scripts\activate
+- pip install -r requirements.txt
+- cp env.example .env
+- python bot.py
 ________________________________________
 🔧 Минимальная настройка .env
 
